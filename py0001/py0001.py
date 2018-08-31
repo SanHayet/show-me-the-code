@@ -12,7 +12,16 @@ def connect(group):
 def generate(n, m):
     return [connect(m) for i in range(n)]
 
-print(generate(5, 4))
+theList = print(generate(5, 4))
+
+
+print(theList)
+
+with open('code.txt', 'w') as f:
+    for code in theList:
+        f.write(code + '\n')
+
+f.close()
 
 
 
